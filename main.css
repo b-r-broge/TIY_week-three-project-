@@ -1,0 +1,97 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.calc-body {
+  width: 80vw;
+  margin: 10vh auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas:
+    "clear output output output output"
+    "seven eight nine divide sqrt"
+    "four five six multiply raise"
+    "one two three minus ."
+    "dec zero equal plus ."
+}
+
+.clear {
+  grid-area: clear;
+}
+
+.output {
+  grid-area: output;
+  text-align: right;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.six {
+  grid-area: six;
+}
+
+.five {
+  grid-area: five;
+}
+
+.four {
+  grid-area: four;
+}
+
+.three {
+  grid-area: three;
+}
+
+.two {
+  grid-area: two;
+}
+
+.one {
+  grid-area: one;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.divide {
+  grid-area: divide;
+}
+
+.multiply {
+  grid-area: multiply;
+}
+
+.plus {
+  grid-area: plus;
+}
+
+.minus {
+  grid-area: minus;
+}
+
+.equal {
+  grid-area: equal;
+}
+
+.dec {
+  grid-area: dec;
+}
+
+.root {
+  grid-area: sqrt;
+}
+
+.raise {
+  grid-area: raise;
+}
