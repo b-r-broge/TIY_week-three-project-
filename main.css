@@ -15,6 +15,10 @@
     "dec zero equal plus ."
 }
 
+button {
+  height: 10vh;
+}
+
 .clear {
   grid-area: clear;
 }
