@@ -3,7 +3,7 @@
 }
 
 .calc-body {
-  width: 80vw;
+  width: 406.25px;
   margin: 10vh auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -16,16 +16,35 @@
 }
 
 button {
-  height: 10vh;
+  height: 80.25px;
+  background: #61B34F;
+  color: white;
+  border: .2px solid white;
+}
+
+.clear:hover, .equal:hover {
+  background: #82C276;
 }
 
 .clear {
   grid-area: clear;
 }
 
+.operator {
+  background: #82C276;
+  color: black;
+}
+
+.operator:hover {
+  color: white;
+}
+
 .output {
   grid-area: output;
   text-align: right;
+  background: #61B34F;
+  color: white;
+  padding-right: 30px;
 }
 
 .nine {
