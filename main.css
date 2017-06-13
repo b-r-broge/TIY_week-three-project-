@@ -5,6 +5,7 @@
 .calc-body {
   width: 406.25px;
   margin: 10vh auto;
+  background: #8ECA82;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-areas:
@@ -12,17 +13,21 @@
     "seven eight nine divide sqrt"
     "four five six multiply raise"
     "one two three minus ."
-    "dec zero equal plus ."
+    "dec zero equal plus .";
+  grid-gap: 1px 1px;
+  font-family: 'Cabin', sans-serif;
+  font-size: 2em;
+  font-weight: lighter;
 }
 
 button {
   height: 80.25px;
   background: #61B34F;
   color: white;
-  border: .2px solid white;
+  border: 0;
 }
 
-.clear:hover, .equal:hover {
+.clear:hover, .equal:hover, .dec:hover {
   background: #82C276;
 }
 
@@ -32,7 +37,7 @@ button {
 
 .operator {
   background: #82C276;
-  color: black;
+  color: #507748;
 }
 
 .operator:hover {
@@ -45,6 +50,7 @@ button {
   background: #61B34F;
   color: white;
   padding-right: 30px;
+  border: 0;
 }
 
 .nine {

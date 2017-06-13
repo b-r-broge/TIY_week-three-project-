@@ -43,58 +43,10 @@ function updateValues(event) {
 
     console.log(output.value);
     let total = output.value;
-    if (total.indexOf("X") > -1) {
-      total = total.replace(/X/g , "*");
-    } if (total.indexOf("^") > -1) {
+    if (total.indexOf("^") > -1) {
       total = total.replace(/\^/g , "**");
     }
     console.log(total)
     output.value = eval(total);
   }
-}
-
-function rounding(number, precision) {
-  // taken from MDN article on Math.round()
-  var factor = Math.pow(10, precision);
-  var tempNumber = number * factor;
-  var roundedTempNumber = Math.round(tempNumber);
-  return roundedTempNumber / factor;
-}
-
-function calc (numArray, operArr) {
-  // console.log(numArray);
-  // console.log(operArr);
-  for (let i = operArr.length - 1; i >= 0 ; i--) {
-    if (operArr[i] === '^') {
-      let a = numArray[i], b = numArray[i+1];
-      numArray[i] = a**b;
-      numArray.splice(i+1, 1);
-      operArr.splice(i, 1);
-    }
-  }
-  for (let i = operArr.length - 1; i >= 0 ; i--) {
-    if (operArr[i] === '*') {
-      let a = numArray[i], b = numArray[i+1];
-      numArray[i] = a*b;
-      numArray.splice(i+1, 1);
-      operArr.splice(i, 1);
-    }
-  }
-  for (let i = operArr.length - 1; i >= 0 ; i--) {
-    if (operArr[i] === '%') {
-      let a = numArray[i], b = numArray[i+1];
-      numArray[i] = a%b;
-      numArray.splice(i+1, 1);
-      operArr.splice(i, 1);
-    }
-  }
-  for (let i = operArr.length - 1; i >= 0 ; i--) {
-    if (operArr[i] === '+') {
-      let a = numArray[i], b = numArray[i+1];
-      numArray[i] = a+b;
-      numArray.splice(i+1, 1);
-      operArr.splice(i, 1);
-    }
-  }
-  return rounding(numArray[0], 2);
 }
